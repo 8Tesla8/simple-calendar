@@ -1,0 +1,20 @@
+<p>calendar works!</p>
+
+
+<div>
+  <button (click)="onPreviousMonth()"> Previous </button>
+  <span> {{ calendarCreator.getMonthName(monthNumber) }} &nbsp; {{ year }} </span>
+  <button (click)="onNextMonth()"> Next </button>
+</div>
+
+<br>
+
+<div class="calendar">
+  <span *ngFor='let weekDay of weekDaysName' class="day">
+    {{ weekDay }}
+  </span>
+
+  <span *ngFor='let day of monthDays' class="day">
+    {{ day.number }}
+  </span>
+</div>
