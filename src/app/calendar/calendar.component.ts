@@ -20,9 +20,13 @@ export class CalendarComponent implements OnInit {
   ngOnInit(): void {
     this.setMonthDays(this.calendarCreator.getCurrentMonth());
 
-    for (let i = 1; i < 8; i++) {
-      this.weekDaysName.push(this.calendarCreator.getWeekDayName(i));
-    }
+    this.weekDaysName.push("Mo");
+    this.weekDaysName.push("Tu");
+    this.weekDaysName.push("We");
+    this.weekDaysName.push("Th");
+    this.weekDaysName.push("Fr");
+    this.weekDaysName.push("Sa");
+    this.weekDaysName.push("Su");
   }
 
   onNextMonth(): void {

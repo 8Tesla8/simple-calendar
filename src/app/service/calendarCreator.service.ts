@@ -7,7 +7,7 @@ export class CalendarCreator {
   constructor() {
     let date = new Date();
     this.currentYear = date.getFullYear();
-    this.currentMonthIndex = date.getMonth(); //index
+    this.currentMonthIndex = date.getMonth(); 
   }
 
   public getCurrentMonth(): Day[] {
@@ -73,9 +73,7 @@ export class CalendarCreator {
   public getWeekDayName(weekDay: number): string {
     switch (weekDay) {
       case 0:
-      case 7:  
         return "Su"; // Sunday
-
       case 1:
         return "Mo"; // Monday
       case 2:
@@ -102,8 +100,6 @@ export class CalendarCreator {
 
     day.number = dayNumber;
     day.year = this.currentYear;
-
-    let d = new Date(year, monthIndex, dayNumber);
 
     day.weekDayNumber = new Date(year, monthIndex, dayNumber).getDay();
     day.weekDayName = this.getWeekDayName(day.weekDayNumber);
