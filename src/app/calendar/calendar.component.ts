@@ -15,7 +15,7 @@ export class CalendarComponent implements OnInit {
 
   public weekDaysName = [];
 
-  constructor(public calendarCreator: CalendarCreator) {}
+  constructor(public calendarCreator: CalendarCreator) { }
 
   ngOnInit(): void {
     this.setMonthDays(this.calendarCreator.getCurrentMonth());
@@ -32,19 +32,19 @@ export class CalendarComponent implements OnInit {
   onNextMonth(): void {
     this.monthNumber++;
 
-    if (this.monthNumber == 13) {
-      this.monthNumber = 1;
+    if (this.monthNumber == 12) {
+      this.monthNumber = 0;
       this.year++;
     }
 
     this.setMonthDays(this.calendarCreator.getMonth(this.monthNumber, this.year));
   }
 
-  onPreviousMonth() : void{
+  onPreviousMonth(): void {
     this.monthNumber--;
 
-    if (this.monthNumber < 1) {
-      this.monthNumber = 12;
+    if (this.monthNumber < 0) {
+      this.monthNumber = 11;
       this.year--;
     }
 
