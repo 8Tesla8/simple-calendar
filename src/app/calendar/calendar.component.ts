@@ -36,7 +36,6 @@ export class CalendarComponent implements OnInit {
       this.monthNumber = 1;
       this.year++;
     }
-    console.log(`year ${this.year}, month ${this.monthNumber}`)
 
     this.setMonthDays(this.calendarCreator.getMonth(this.monthNumber, this.year));
   }
@@ -48,7 +47,6 @@ export class CalendarComponent implements OnInit {
       this.monthNumber = 12;
       this.year--;
     }
-    console.log(`year ${this.year}, month ${this.monthNumber}`)
 
     this.setMonthDays(this.calendarCreator.getMonth(this.monthNumber, this.year));
   }
